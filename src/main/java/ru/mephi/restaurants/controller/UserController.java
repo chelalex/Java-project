@@ -36,3 +36,7 @@ public class UserController {
     }
 
 }
+<<<<<<< HEAD
+=======
+//findRestaurant
+>>>>>>> 7fdcb2a0ff6ea69e40518b2da88f9ff85ead7a0f

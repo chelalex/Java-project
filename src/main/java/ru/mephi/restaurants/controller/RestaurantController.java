@@ -13,5 +13,31 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 
 public class RestaurantController {
+<<<<<<< HEAD
+=======
+    private final RestaurantService restaurantService;
+
+    @GetMapping("")
+    public ResponseEntity<Iterable<RestaurantDto>> getRestaurants() {
+        return ResponseEntity.ok(restaurantService.getRestaurants());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Restaurant> getRestaurant(@PathVariable Long id) {
+        return ResponseEntity.ok(restaurantService.getRestaurant(id));
+    }
+
+    @PostMapping("")
+    public ResponseEntity<Restaurant> saveRestaurant(@RequestBody Restaurant restaurant) {
+        return ResponseEntity.ok(restaurantService.saveRestaurant(restaurant));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteRestaurant(@PathVariable Long id) {
+        restaurantService.deleteRestaurant(id);
+        return ResponseEntity.noContent().build();
+    }
+
+>>>>>>> 7fdcb2a0ff6ea69e40518b2da88f9ff85ead7a0f
 
 }
