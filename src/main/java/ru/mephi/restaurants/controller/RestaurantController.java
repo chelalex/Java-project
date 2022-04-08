@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 
 public class RestaurantController {
+
     private final RestaurantService restaurantService;
 
     @GetMapping("")
