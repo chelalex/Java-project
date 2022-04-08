@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 
 public class RestaurantController {
-<<<<<<< HEAD
-=======
+
     private final RestaurantService restaurantService;
 
     @GetMapping("")
@@ -38,6 +37,5 @@ public class RestaurantController {
         return ResponseEntity.noContent().build();
     }
 
->>>>>>> 7fdcb2a0ff6ea69e40518b2da88f9ff85ead7a0f
 
 }

@@ -31,14 +31,8 @@ public class User {
     private String fatherName;
     private String phone;
 
-<<<<<<< HEAD
-    @OneToMany
-    @JoinColumn(name = "user_id")
-=======
     @OneToMany(mappedBy = "user")
-    //@JoinColumn(name = "user_id")
->>>>>>> 7fdcb2a0ff6ea69e40518b2da88f9ff85ead7a0f
+    //@JoinColumn(name = "user")
     private Set<TableOrder> orders;
 
 }
-//dffdf

@@ -2,11 +2,7 @@ package ru.mephi.restaurants.domain.restaurant;
 
 import lombok.Getter;
 import lombok.Setter;
-<<<<<<< HEAD
-import ru.mephi.restaurants.domain.table.Table;
-=======
 import ru.mephi.restaurants.domain.table.RestTable;
->>>>>>> 7fdcb2a0ff6ea69e40518b2da88f9ff85ead7a0f
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -30,11 +26,7 @@ public class Restaurant {
 
     @OneToMany
     @JoinColumn(name = "restaurant_id")
-<<<<<<< HEAD
-    private Set<Table> tables;
-=======
     private Set<RestTable> restTables;
->>>>>>> 7fdcb2a0ff6ea69e40518b2da88f9ff85ead7a0f
 
     @OneToMany
     @JoinColumn(name = "restaurant_id")

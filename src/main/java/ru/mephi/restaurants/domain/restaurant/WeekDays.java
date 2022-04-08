@@ -36,9 +36,6 @@ public class WeekDays {
     private LocalTime sundayEnd;
 
     @ManyToOne(fetch = FetchType.LAZY)
-<<<<<<< HEAD
-=======
     @JoinColumn(name = "restaurant_id")
->>>>>>> 7fdcb2a0ff6ea69e40518b2da88f9ff85ead7a0f
     private Restaurant restaurant;
 }
