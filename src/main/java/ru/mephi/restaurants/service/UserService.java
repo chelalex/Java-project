@@ -8,6 +8,7 @@ import ru.mephi.restaurants.domain.user.UserDto;
 import ru.mephi.restaurants.repository.UserRepository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -35,5 +36,7 @@ public class UserService {
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
+
+    public List<UserDto> findList()
 
 }
