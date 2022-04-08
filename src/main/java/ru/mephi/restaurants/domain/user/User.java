@@ -7,6 +7,7 @@ import ru.mephi.restaurants.domain.order.TableOrder;
 
 import javax.persistence.*;
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -14,7 +15,6 @@ import java.util.Set;
 @Getter
 @Setter
 public class User {
-
     @Id
     @Column(name = "user_id", nullable = false)
     @GeneratedValue(strategy= GenerationType.AUTO)
