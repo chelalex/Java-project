@@ -1,5 +1,6 @@
 package ru.mephi.restaurants.service;
 
+import org.springframework.data.domain.Sort;
 import ru.mephi.restaurants.domain.restaurant.Restaurant;
 import ru.mephi.restaurants.domain.restaurant.RestaurantDto;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +11,7 @@ import ru.mephi.restaurants.repository.RestaurantRepository;
 import ru.mephi.restaurants.repository.UserRepository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -39,5 +41,13 @@ public class RestaurantService {
         restaurantRepository.deleteById(id);
     }
 
+    public List<RestaurantDto> findAll(Sort sort) {
+        var list = restaurantRepository.findAll(sort);
+        var result = new ArrayList<RestaurantDto>();
+        for (Restaurant restaurant : list) {
+            result.add(mapper.toDto(restaurant));
+        }
+        return result;
+    }
 
 }

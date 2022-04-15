@@ -1,12 +1,16 @@
 package ru.mephi.restaurants.controller;
 
+import org.springframework.data.domain.Sort;
 import ru.mephi.restaurants.domain.restaurant.Restaurant;
 import ru.mephi.restaurants.domain.restaurant.RestaurantDto;
+import ru.mephi.restaurants.domain.user.UserDto;
 import ru.mephi.restaurants.service.RestaurantService;
 import ru.mephi.restaurants.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/restaurant")
@@ -35,6 +39,10 @@ public class RestaurantController {
     public ResponseEntity<Void> deleteRestaurant(@PathVariable Long id) {
         restaurantService.deleteRestaurant(id);
         return ResponseEntity.noContent().build();
+    }
+    @GetMapping("/sort")
+    public ResponseEntity<List<RestaurantDto>> findList(Sort sort){
+        return ResponseEntity.ok(restaurantService.findAll(sort));
     }
 
 
