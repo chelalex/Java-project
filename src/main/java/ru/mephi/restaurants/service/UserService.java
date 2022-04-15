@@ -10,11 +10,8 @@ import ru.mephi.restaurants.domain.user.UserDto;
 import ru.mephi.restaurants.repository.UserRepository;
 
 import java.util.ArrayList;
-<<<<<<< HEAD
 import java.util.List;
-=======
 import java.util.Locale;
->>>>>>> ccbc81a (createUser is started)
 
 @Service
 @RequiredArgsConstructor
