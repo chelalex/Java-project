@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
+
 public class TableTime {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -17,10 +18,14 @@ public class TableTime {
     private LocalDateTime reservedFrom;
     private LocalDateTime reservedTo;
 
+    @OneToOne(mappedBy = "tableTime")
+    private TableOrder order;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "resttable_id")
     private RestTable restTable;
 
     @OneToOne(mappedBy = "tableTime")
     private TableOrder restOrder;
+
 }

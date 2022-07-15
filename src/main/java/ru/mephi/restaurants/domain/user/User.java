@@ -32,8 +32,7 @@ public class User {
     private String phone;
 
     @OneToMany(mappedBy = "user")
-    //@JoinColumn(name = "user_id")
     private Set<TableOrder> orders;
 
 }
-//dffdf
+//blea

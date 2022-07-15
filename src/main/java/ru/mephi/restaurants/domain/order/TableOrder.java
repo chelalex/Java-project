@@ -19,9 +19,14 @@ public class TableOrder {
     private Long id;
     private Status status;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDateTime reservedFrom;
     private LocalDateTime reservedTo;
+
+    //@OneToOne(cascade = CascadeType.ALL)
+    //@JoinColumn(name = "table_time_id", referencedColumnName = "id")
+    //private TableTime tableTime;
+
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "table_time_id", referencedColumnName = "id")
